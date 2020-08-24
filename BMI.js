@@ -1,5 +1,3 @@
-"use strict"
-
 class BMI{
     constructor(height =0,weight= 0){
         this.height =height;
