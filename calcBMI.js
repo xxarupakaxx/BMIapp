@@ -21,3 +21,15 @@ function onCalcBMIButtonClick(){
 let resultMessage = document.getElementById("resultMessage");
 resultMessage.classList.remove("displayNone");
 } 
+
+window.addEventListener("DOMContentLoaded",function(){
+
+    let heightInput = document.getElementById("heightInput");
+    heightInput.addEventListener("input",checkInput);
+    heightInput.addEventListener("blur" , checkInput);
+
+    let weightInput = document.getElementById("weightInput");
+    weightInput.addEventListener("input",checkInput);
+    weightInput.addEventListener("blur",checkInput);
+});
+
