@@ -17,6 +17,30 @@
     </style>
 </head>
 <body>
+    <h1 id="headTitle">BMI計算</h1>
+<p>
+    身長と体重を入力してボタンをクリックしてください。
+</p>
+<p>
+    <div>
+        <input type=" text" id="heightInput" name="height" placeholder="身長">cm <br>
+        <span id="heightInputMsg" class="redText"></span>
+    </div>
+    <div>
+       <input type="text" id="weightInput" name="weight" placeholder="体重">kg <br>
+       <span id="weightInputMsg" class="redText"></span>
+
+
+    </div> 
+    <button type="button" onclick="onCalcBMIButtonClick()">計算 </button>
+</p>
+<p id="resultMessage" class="displayNone">
+    あんたのBMI値は<span id="bmiResult" class="redText font16"></span>です<br>
+    <span id="adviceMessage"></span>
+</p>
+<script src="BMI.js"></script>
+<script src="calcBMI.js"></script>
+
     
 </body>
 </html>
