@@ -31,7 +31,7 @@ window.addEventListener("DOMContentLoaded",function(){
     let weightInput = document.getElementById("weightInput");
     weightInput.addEventListener("input",checkInput);
     weightInput.addEventListener("blur",checkInput);
-});
+
 
 function checkInput(){
     let buttonEnabled = true;
@@ -61,7 +61,6 @@ function checkInput(){
         heightInputMsg.textContent ="";
     }
 let weightStr = weightInput.value;
-
 let weight = Number(weightStr);
 let weightInputMsg = document.getElementById("weightInputMsg");
 
@@ -85,4 +84,13 @@ else {
     weightInputMsg.textContent ="";
 }
 
+let calcBMIButton = document.getElementById("calcBMIButton")
+if(buttonEnabled){
+    calcBMIButton.removeAttribute("disabled");
+
 }
+else {
+    calcBMIButton.setAttribute("disabled","disabled");
+}
+}
+});
