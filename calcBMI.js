@@ -33,3 +33,56 @@ window.addEventListener("DOMContentLoaded",function(){
     weightInput.addEventListener("blur",checkInput);
 });
 
+function checkInput(){
+    let buttonEnabled = true;
+
+    let heightStr = heightInput.value;
+
+    let height = Number(heightStr);
+    let heightInputMsg = document.getElementById("heightInputMsg");
+
+    if(heightStr.length == 0){
+        buttonEnabled =false;
+
+        heightInputMsg.textContent = "身長を入力してください";
+
+        
+    }
+    else if( !isFinite(height)){
+        buttonEnabled = false;
+        heightInputMsg ="身長を入力してください";
+
+    }
+    else if(height < 0){
+        buttonEnabled = false;
+        heightInputMsg ="身長を入力してください";
+    }
+    else {
+        heightInputMsg.textContent ="";
+    }
+let weightStr = weightInput.value;
+
+let weight = Number(weightStr);
+let weightInputMsg = document.getElementById("weightInputMsg");
+
+if(weightStr.length == 0){
+    buttonEnabled =false;
+
+    weightInputMsg.textContent = "体重を入力してください";
+
+    
+}
+else if( !isFinite(weight)){
+    buttonEnabled = false;
+    weightInputMsg ="体重を入力してください";
+
+}
+else if(weight < 0){
+    buttonEnabled = false;
+    weightInputMsg ="身長を入力してください";
+}
+else {
+    weightInputMsg.textContent ="";
+}
+
+}
